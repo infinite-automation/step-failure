@@ -1,0 +1,16 @@
+name: step failure handling practical
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: echo "build complete"
+      - name: test
+        run: exit 1
+      - name: deploy
+        run: echo "deploying application"

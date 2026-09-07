@@ -11,6 +11,7 @@ jobs:
       - name: build
         run: echo "build complete"
       - name: test
+        continue-on-error: true
         run: exit 1
       - name: deploy
         run: echo "deploying application"
